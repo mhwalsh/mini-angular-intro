@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- angular directives are attributes that start with ng -->
 <html ng-app="myApp">
   <head>
     <meta charset="utf-8">
@@ -10,8 +11,10 @@
     <div ng-controller="myFirstController as first">
       {{first.oneThing}}
       <b>{{first.twoThing}}</b>
+      <!-- Two way binding example  -->
+      <input ng-model="first.something" type="text" name="" value="">
       <div>
-        {{first.bobString}}
+        {{first.something}}
       </div>
     </div>
   </body>
