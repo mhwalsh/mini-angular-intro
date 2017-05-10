@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Mini Laucher</title>
-    <script src="angular.min.js" charset="utf-8"></script>
-    <script src="script.js" charset="utf-8"></script>
+    <script src="script/angular.min.js" charset="utf-8"></script>
+    <script src="script/script.js" charset="utf-8"></script>
   </head>
   <body>
     <div ng-controller="myFirstController as first">
@@ -16,6 +16,14 @@
       <div>
         {{first.something}}
       </div>
+      <div ng-controller="myNestedController as nested">
+        {{nested.nestedThing}}
+        {{nested.oneThing}}
+        {{first.oneThing}}
+      </div>
+    </div>
+    <div ng-controller="mySecondController">
+      {{oneThing}}
     </div>
   </body>
 </html>
